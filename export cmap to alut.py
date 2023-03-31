@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 
 def export_cmap(cmap):
     """
-    Function to export matplotlib colourmap object to a .alut file which can be read by Petrel
+    Function to export matplotlib colourmap object to a .alut file which can be read by Petrel.
+    RGBA values need to be rounded to the nearest integer so some precision is lost.
     Input: matplotlib.colors.ListedColormap or matplotlib.colors.LinearSegmentedColormap
-    Output: .alut file (a csv text file with 256 lines of R,G,B,A values)
+    Output: .alut file (a csv text file with 256 lines of R,G,B,A integer values)
     """
     if cmap.N == 256:
         arr = (np.array([(cmap(i)) for i in range(256)]) * 255).round().astype(int)
