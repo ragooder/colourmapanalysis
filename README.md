@@ -1,4 +1,4 @@
-# colourmapanalysis
+# Colour Map Analysis
 
 This repository contains some basic colourbar QC tools for Petrel format colourbars (.alut files).
 
